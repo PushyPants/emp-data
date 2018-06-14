@@ -45,7 +45,6 @@ $(document).ready(function () {
 
             $.each(employees, function () {
                 $(`tbody`).append($(`<tr>`).attr(`id`, `key`));
-                $(`#key`).
                 
             });
         });
