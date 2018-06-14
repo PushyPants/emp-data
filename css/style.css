@@ -1,0 +1,36 @@
+body {
+    background: url(background.jpg) no-repeat center center fixed;
+    background-size: cover;
+}
+
+.card {
+    margin: 30px 0px 30px 0px;
+    padding: 10px;
+    background: rgb(148, 207, 148);
+    box-shadow: 4px 4px rgba(130, 130, 131, 0.637);
+}
+
+.card-header {
+    font-size: 26px;
+    color: aliceblue;
+    text-align: center;
+    font-weight: bold;
+    background: rgba(0, 128, 0, 0.719);
+    margin-bottom: 10px;
+}
+
+input {
+    background: rgb(199, 247, 199) !important;
+}
+
+#submitBtn {
+    background: rgba(0, 128, 0);
+    color: aliceblue;
+    box-shadow: 4px 4px rgba(82, 82, 83, 0.637);
+}
+
+#submitBtn:hover {
+    box-shadow: none;
+    background: rgb(1, 110, 1);
+
+}
