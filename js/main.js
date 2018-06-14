@@ -13,7 +13,46 @@ $(document).ready(function () {
     firebase.initializeApp(config);
 
     let database = firebase.database();
-    
 
+    $(document).on(``, `click`, function (event) {
+        event.preventDefault();
+        // Generate new table entry with: 
+        // Name
+        // Start Date
+        // Months Worked
+        // Monthly Rate in dollars
+        // Total billed
+
+        let emp = {
+            name: $(``).val().trim(),
+            startDate: $(``).val().trim(),
+            monthsWorked: $(``).val().trim(),
+            monthlyRate: $(``).val().trim(),
+            totalBilled: $(``).val().trim()
+        }
+
+        pushData(emp);
+
+    });
+
+    function pushData(obj) {
+        database.ref(`employees`).push(obj);
+    }
+
+    function initializeTable () {
+        database.ref(`employees`).on(`value`, function (snapshot) {
+            let employees = snapshot.val();
+
+            $.each(employees, function () {
+                $(`tbody`).append($(`<tr>`).attr(`id`, `key`));
+                $(`#key`).
+                
+            });
+        });
+    }
+
+    database.ref(`employees`).on(`child_added`, function (childSnapshot) {
+        console.log(childSnapshot.val().name);
+    });
 
 });
